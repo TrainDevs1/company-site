@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Train Devs</title>
+   
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
+
+    <style>
+    .service-content p, p {
+        text-align: justify;
+    }
+</style>
+</head>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // ===== MENU TOGGLE =====
+    const menuBtn = document.getElementById("menuopen");
+    const menu = document.getElementById("menu");
+
+    menuBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        menu.classList.toggle("show");
+    });
+
+    // ===== EMAIL JS =====
+    emailjs.init("xBFCjhSQKdVUuBOgD");
+
+    const form = document.getElementById("form1");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        emailjs.sendForm("service_t4r5cde", "template_aeuurhx", this)
+            .then(function () {
+                alert("Message sent successfully!");
+                form.reset();
+            }, function (error) {
+                alert("Failed to send message.");
+                console.log(error);
+            });
+    });
+
+});
+</script>
+
+<body>
+    <main class="jumbo">
+        <header class="header">
+           
+            <div class="btns">
+                <a href="#contact" class="btn1">LET'S TALK</a>
+                <a href="#" class="btn2" id="menuopen">MENU</a>
+            </div>
+            <div id="menu">
+                <a href="#services" class="butn2">Services</a>
+                <a href="#portfolio" class="butn3">Work</a>
+                <a href="#skills" class="butn4">Expertise</a>
+                <a href="#about" class="butn1">About</a>
+                <a href="#contact" class="butn5">Contact</a>
+            </div>
+        </header>
+        <h1 class="title">Train Devs</h1>
+        <section id="about">
+            <div class="about-content">
+                <h3>BIOGRAPHY</h3>
+       <p>Traindevs is a professional Software House <br> delivering innovative digital solutions <br> for modern businesses. With 3+ years <br> of experience in web development and <br> digital marketing, we focus on building <br> scalable, high-performance platforms <br> that help brands grow and succeed.</p>
+
+                <h3>CONNECT</h3>
+                <div class="logos">
+                    <a href="https://github.com/ehtisham2319"><img src="./images/github-fill.png" alt="github"></a>
+                    <a href="https://www.linkedin.com/in/ch-ehtsham-419a4b344/"><img src="./images/linkedin-box-fill.png" alt="linkedin"></a>
+                    <a href="https://instagram.com/ch_ehtsham__"><img src="./images/instagram-line.png" alt="instagram"></a>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="back"></div>
+                <div class="photo"></div>
+            </div>
+            <div class="experience">
+                <h3>PROJECTS DONE</h3>
+                <p>130</p>
+                <h3>YEARS OF EXPERIENCE</h3>
+                <p>3+</p>
+                <h3>Members</h3>
+                <p>20+</p>
+            </div>
+        </section>
+        <section id="services">
+            <h1 class="service-title">What We Do</h1>
+           <div class="service-content">
+    <div class="service service1">
+        <span>Web Development</span>
+        <p>
+            We build modern, responsive business websites and e-commerce platforms.<br>
+            Custom web applications using latest technologies.<br>
+            Fast, secure, and scalable digital solutions.
+        </p>
+    </div>
+
+    <div class="service service2">
+        <span>Digital Marketing & Meta Ads</span>
+        <p>
+            Professional Meta Ads campaign management.<br>
+            Social media marketing and brand growth strategies.<br>
+            Lead generation and performance optimization.
+        </p>
+    </div>
+
+    <div class="service service3">
+        <span>Creative & Media Services</span>
+        <p>
+            High-quality video editing and promotional content.<br>
+            Social media content creation and branding.<br>
+            Complete digital presence management.
+        </p>
+    </div>
+</div>
+
+        </section>
+        <section id="portfolio">
+            <h1 class="portfolio-title">Recent Works</h1>
+               <p>
+                We have successfully developed and launched multiple business platforms including:
+                <br><br>
+                • Rizstore.pk An E-commerce Store<br>
+                • Bogagardenrestaurant.com A Restaurant Website<br>
+                • Dreamspacebeds A Furniture Brand Store<br><br>
+                Many exciting projects are currently under development.
+            </p>
+            <div class="buttons">
+                <div id="left-btn" class="btn"></div>
+                <div id="right-btn" class="btn"></div>
+            </div>
+            <div class="container-slider">
+                <div class="slider">
+                    <div class="p1 p"></div>
+                    <div class="p2 p"></div>
+                    <div class="p3 p"></div>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <h1 class="skills-title">Our Expertise</h1>
+            <div class="container-skills">
+                <div id="skill1" class="skill">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <text x="12" y="20.35" class="percentage1">100%</text>
+
+                    </svg>
+                   Web Development
+                </div>
+                <div id="skill2" class="skill">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <text x="12" y="20.35" class="percentage1">100%</text>
+
+                    </svg>
+                   Digital Marketing
+                </div>
+                <div id="skill3" class="skill">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <text x="12" y="20.35" class="percentage1">100%</text>
+
+                    </svg>
+                     Meta Ads
+                </div>
+                <div id="skill4" class="skill">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <text x="12" y="20.35" class="percentage1">100%</text>
+
+                    </svg>
+                    Video Editing
+                </div>
+                 <div id="skill5" class="skill">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <text x="12" y="20.35" class="percentage1">100%</text>
+
+                    </svg>
+                   Deployement Engineering
+                </div>
+                   <div id="skill6" class="skill">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <text x="12" y="20.35" class="percentage1">100%</text>
+
+                    </svg>
+                 Search Engine Optimization
+                </div>
+                    <div id="skill7" class="skill">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <text x="12" y="20.35" class="percentage1">100%</text>
+
+                    </svg>
+                 Web Designing
+                </div>
+                  <div id="skill8" class="skill">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <text x="12" y="20.35" class="percentage1">100%</text>
+
+                    </svg>
+                 Mentainance and Management services
+                </div>
+                                     </section>
+     <section id="contact">
+    <h1 class="contact-title">Let's Work Together</h1>
+    <div class="form">
+        <div class="contactme">
+            <div class="email">
+                <h5 class="c1">EMAIL:</h5>
+                <a href="#" class="c2">traindevs1@gmail.com</a>
+            </div>
+            <div class="phone">
+                <h5 class="c1">CALL:</h5>
+                <a href="#" class="c2">+92 3139686187</a>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form id="form1">
+            <input type="text" name="name" id="form-name" placeholder="Your Name" required>
+            <input type="email" name="email" id="form-email" placeholder="Your Email" required><br>
+            <input type="text" name="subject" id="form-subject" placeholder="Subject" required><br>
+            <textarea name="message" cols="60" rows="7" placeholder="Your Message" id="form-message" required></textarea><br>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+    </main>
+    <script src="index.js"></script>
+</body>
+
+
+</html>
