@@ -1,268 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <title>Train Devs</title>
-   
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-
-
-    <style>
-    .service-content p, p {
-        text-align: justify;
-    }
-</style>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+    <title>TrainDevs |Software House</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  
+    <link rel="shortcut icon" href="/images/TrainDevs.png" type="image/x-icon">
+    <script
+  src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.3/dist/dotlottie-wc.js"
+  type="module"
+></script>
 </head>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-    // ===== MENU TOGGLE =====
-    const menuBtn = document.getElementById("menuopen");
-    const menu = document.getElementById("menu");
-
-    menuBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        menu.classList.toggle("show");
-    });
-
-    // ===== EMAIL JS =====
-    emailjs.init("xBFCjhSQKdVUuBOgD");
-
-    const form = document.getElementById("form1");
-
-    form.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        emailjs.sendForm("service_t4r5cde", "template_aeuurhx", this)
-            .then(function () {
-                alert("Message sent successfully!");
-                form.reset();
-            }, function (error) {
-                alert("Failed to send message.");
-                console.log(error);
-            });
-    });
-
-});
-</script>
-
 <body>
-    <main class="jumbo">
-        <header class="header">
-           
-            <div class="btns">
-                <a href="#contact" class="btn1">LET'S TALK</a>
-                <a href="#" class="btn2" id="menuopen">MENU</a>
-            </div>
-            <div id="menu">
-                <a href="#services" class="butn2">Services</a>
-                <a href="#portfolio" class="butn3">Work</a>
-                <a href="#skills" class="butn4">Expertise</a>
-                <a href="#about" class="butn1">About</a>
-                <a href="#contact" class="butn5">Contact</a>
-            </div>
-        </header>
-        <h1 class="title">Train Devs</h1>
-        <section id="about">
-            <div class="about-content">
-                <h3>BIOGRAPHY</h3>
-       <p>Traindevs is a professional Software House <br> delivering innovative digital solutions <br> for modern businesses. With 3+ years <br> of experience in web development and <br> digital marketing, we focus on building <br> scalable, high-performance platforms <br> that help brands grow and succeed.</p>
 
-                <h3>CONNECT</h3>
-                <div class="logos">
-                    <a href="https://github.com/ehtisham2319"><img src="./images/github-fill.png" alt="github"></a>
-                    <a href="https://www.linkedin.com/in/ch-ehtsham-419a4b344/"><img src="./images/linkedin-box-fill.png" alt="linkedin"></a>
-                    <a href="https://instagram.com/ch_ehtsham__"><img src="./images/instagram-line.png" alt="instagram"></a>
+    
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    
+    <div class="noise"></div>
+
+  
+    <nav class="nav" id="nav">
+        <a href="#hero" class="nav-logo">TD<span>.</span></a>
+        <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#portfolio">Work</a>
+            <a href="#skills">Expertise</a>
+            <a href="#about">About</a>
+        </div>
+        <a href="#contact" class="nav-cta">Let's Talk <span class="arrow-icon">↗</span></a>
+        <button class="hamburger" id="menuopen" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    
+    <div class="mobile-menu" id="menu">
+        <a href="#services">Services</a>
+        <a href="#portfolio">Work</a>
+        <a href="#skills">Expertise</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+   
+    <section class="hero" id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Software House · Est. 2022
+            </div>
+            <h1 class="hero-title">
+                <span class="line line-1">We Build</span>
+                <span class="line line-2">Digital</span>
+                <span class="line line-3 outline-text">Futures<span class="hero-dot">.</span></span>
+            </h1>
+            <p class="hero-sub">Scalable platforms, bold brands & marketing that actually converts — crafted by a team of 20+ experts.</p>
+            <div class="hero-actions">
+                <a href="#portfolio" class="btn-primary">View Our Work</a>
+                <a href="#services" class="btn-ghost">Explore Services <span>→</span></a>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-num" data-target="130">0</span>
+                <span class="stat-label">Projects Delivered</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+                <span class="stat-num" data-target="3">0</span><span class="stat-plus">+</span>
+                <span class="stat-label">Years of Experience</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+                <span class="stat-num" data-target="20">0</span><span class="stat-plus">+</span>
+                <span class="stat-label">Team Members</span>
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+  
+    <section class="services" id="services">
+        <div class="section-header">
+            <span class="section-tag">SERVICES</span>
+            <h2>What We <span class="accent">Do</span></h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card" data-num="01">
+                <div class="service-icon">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <rect x="4" y="8" width="32" height="24" rx="3" stroke="#3446ec" stroke-width="2"/>
+                        <path d="M13 18L17 22L13 26M20 26H27" stroke="#3446ec" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
                 </div>
+                <h3>Web Development</h3>
+                <p>Modern, responsive business websites and e-commerce platforms built with the latest technologies. Fast, secure, and scalable digital solutions tailored to your goals.</p>
+                <div class="service-tags">
+                    <span>React</span><span>Express.js</span><span>Node.js</span><span>MongoDB</span>
+                    <span>Tailwind CSS</span> <span>DNS Configuration </span> <span>Server Management</span>
+                    <span>GSAP</span> <span>Framer Motion</span> <span>Web Designing</span> <span>Mentainance & Support</span>
+                    <span>Website Indexing</span>
+                </div>
+               
             </div>
-            <div class="profile">
-                <div class="back"></div>
-                <div class="photo"></div>
+            <div class="service-card" data-num="02">
+                <div class="service-icon">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <circle cx="20" cy="20" r="14" stroke="#3446ec" stroke-width="2"/>
+                        <path d="M8 20H32M20 6C16 12 16 28 20 34M20 6C24 12 24 28 20 34" stroke="#3446ec" stroke-width="2"/>
+                    </svg>
+                </div>
+                <h3>Digital Marketing & Meta Ads</h3>
+                <p>Professional Meta Ads campaign management, social media marketing, and brand growth strategies. We drive real leads with performance-first optimization.</p>
+                <div class="service-tags">
+                    <span>Meta Ads</span><span>Search Engine Optimization</span><span>Lead Generation</span><span>Analytics</span>
+                    <span>Google Ads</span>
+                </div>
+               
             </div>
-            <div class="experience">
-                <h3>PROJECTS DONE</h3>
-                <p>130</p>
-                <h3>YEARS OF EXPERIENCE</h3>
-                <p>3+</p>
-                <h3>Members</h3>
-                <p>20+</p>
+            <div class="service-card" data-num="03">
+                <div class="service-icon">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path d="M8 30V10L20 18L32 10V30" stroke="#3446ec" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="20" cy="24" r="4" stroke="#3446ec" stroke-width="2"/>
+                    </svg>
+                </div>
+                <h3>Creative & Media Services</h3>
+                <p>High-quality video editing, promotional content, and social media branding. We manage your entire digital presence from concept to execution.</p>
+                <div class="service-tags">
+                    <span>Video Editing</span><span>Branding</span><span>Social Media Management</span><span>Content</span>
+                    <span>Graphic Designing</span><span>Logo Designing</span>
+                </div>
+               
             </div>
-        </section>
-        <section id="services">
-            <h1 class="service-title">What We Do</h1>
-           <div class="service-content">
-    <div class="service service1">
-        <span>Web Development</span>
-        <p>
-            We build modern, responsive business websites and e-commerce platforms.<br>
-            Custom web applications using latest technologies.<br>
-            Fast, secure, and scalable digital solutions.
-        </p>
-    </div>
+        </div>
+    </section>
 
-    <div class="service service2">
-        <span>Digital Marketing & Meta Ads</span>
-        <p>
-            Professional Meta Ads campaign management.<br>
-            Social media marketing and brand growth strategies.<br>
-            Lead generation and performance optimization.
-        </p>
-    </div>
-
-    <div class="service service3">
-        <span>Creative & Media Services</span>
-        <p>
-            High-quality video editing and promotional content.<br>
-            Social media content creation and branding.<br>
-            Complete digital presence management.
-        </p>
-    </div>
-</div>
-
-        </section>
-        <section id="portfolio">
-            <h1 class="portfolio-title">Recent Works</h1>
-               <p>
-                We have successfully developed and launched multiple business platforms including:
-                <br><br>
-                • Rizstore.pk An E-commerce Store<br>
-                • Bogagardenrestaurant.com A Restaurant Website<br>
-                • Dreamspacebeds A Furniture Brand Store<br><br>
-                Many exciting projects are currently under development.
-            </p>
-            <div class="buttons">
-                <div id="left-btn" class="btn"></div>
-                <div id="right-btn" class="btn"></div>
+    <section class="portfolio" id="portfolio">
+        <div class="section-header">
+            <span class="section-tag">PORTFOLIO</span>
+            <h2>Recent <span class="accent">Works</span></h2>
+        </div>
+        <p class="portfolio-intro">We have successfully developed and launched multiple business platforms. Every project is built with precision, performance, and a sharp eye for design.</p>
+        <div class="slider-wrapper">
+            <div class="slider-controls">
+                <button class="slider-btn" id="left-btn" aria-label="Previous">←</button>
+                <span class="slide-counter"><span id="current-slide">1</span> / <span id="total-slides">3</span></span>
+                <button class="slider-btn" id="right-btn" aria-label="Next">→</button>
             </div>
             <div class="container-slider">
                 <div class="slider">
-                    <div class="p1 p"></div>
-                    <div class="p2 p"></div>
-                    <div class="p3 p"></div>
+                    <div class="p p1">
+                        <div class="slide-info">
+                            <span class="slide-tag">E-Commerce</span>
+                            <h4>Rizstore.pk</h4>
+                            <p>Full-featured online store with seamless checkout experience.</p>
+                        </div>
+                    </div>
+                    <div class="p p2">
+                        <div class="slide-info">
+                            <span class="slide-tag">Restaurant</span>
+                            <h4>Bogagardenrestaurant.com</h4>
+                            <p>Elegant restaurant website with online booking and menu.</p>
+                        </div>
+                    </div>
+                    <div class="p p3">
+                        <div class="slide-info">
+                            <span class="slide-tag">Furniture Brand</span>
+                            <h4>Dreamspacebeds</h4>
+                            <p>Premium furniture brand store with immersive product display.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section id="skills">
-            <h1 class="skills-title">Our Expertise</h1>
-            <div class="container-skills">
-                <div id="skill1" class="skill">
-                    <svg viewBox="0 0 36 36" class="circular-chart">
-                        <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
-                    a 15.9155 15.9155 0 0 1 0 31.831
-                    a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <text x="12" y="20.35" class="percentage1">100%</text>
-
-                    </svg>
-                   Web Development
-                </div>
-                <div id="skill2" class="skill">
-                    <svg viewBox="0 0 36 36" class="circular-chart">
-                        <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
-                    a 15.9155 15.9155 0 0 1 0 31.831
-                    a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <text x="12" y="20.35" class="percentage1">100%</text>
-
-                    </svg>
-                   Digital Marketing
-                </div>
-                <div id="skill3" class="skill">
-                    <svg viewBox="0 0 36 36" class="circular-chart">
-                        <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
-                    a 15.9155 15.9155 0 0 1 0 31.831
-                    a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <text x="12" y="20.35" class="percentage1">100%</text>
-
-                    </svg>
-                     Meta Ads
-                </div>
-                <div id="skill4" class="skill">
-                    <svg viewBox="0 0 36 36" class="circular-chart">
-                        <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
-                    a 15.9155 15.9155 0 0 1 0 31.831
-                    a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <text x="12" y="20.35" class="percentage1">100%</text>
-
-                    </svg>
-                    Video Editing
-                </div>
-                 <div id="skill5" class="skill">
-                    <svg viewBox="0 0 36 36" class="circular-chart">
-                        <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
-                    a 15.9155 15.9155 0 0 1 0 31.831
-                    a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <text x="12" y="20.35" class="percentage1">100%</text>
-
-                    </svg>
-                   Deployement Engineering
-                </div>
-                   <div id="skill6" class="skill">
-                    <svg viewBox="0 0 36 36" class="circular-chart">
-                        <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
-                    a 15.9155 15.9155 0 0 1 0 31.831
-                    a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <text x="12" y="20.35" class="percentage1">100%</text>
-
-                    </svg>
-                 Search Engine Optimization
-                </div>
-                    <div id="skill7" class="skill">
-                    <svg viewBox="0 0 36 36" class="circular-chart">
-                        <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
-                    a 15.9155 15.9155 0 0 1 0 31.831
-                    a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <text x="12" y="20.35" class="percentage1">100%</text>
-
-                    </svg>
-                 Web Designing
-                </div>
-                  <div id="skill8" class="skill">
-                    <svg viewBox="0 0 36 36" class="circular-chart">
-                        <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
-                    a 15.9155 15.9155 0 0 1 0 31.831
-                    a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        <text x="12" y="20.35" class="percentage1">100%</text>
-
-                    </svg>
-                 Mentainance and Management services
-                </div>
-                                     </section>
-     <section id="contact">
-    <h1 class="contact-title">Let's Work Together</h1>
-    <div class="form">
-        <div class="contactme">
-            <div class="email">
-                <h5 class="c1">EMAIL:</h5>
-                <a href="#" class="c2">traindevs1@gmail.com</a>
-            </div>
-            <div class="phone">
-                <h5 class="c1">CALL:</h5>
-                <a href="#" class="c2">+92 3139686187</a>
             </div>
         </div>
+    </section>
 
-        <!-- Contact Form -->
-        <form id="form1">
-            <input type="text" name="name" id="form-name" placeholder="Your Name" required>
-            <input type="email" name="email" id="form-email" placeholder="Your Email" required><br>
-            <input type="text" name="subject" id="form-subject" placeholder="Subject" required><br>
-            <textarea name="message" cols="60" rows="7" placeholder="Your Message" id="form-message" required></textarea><br>
-            <button type="submit">Send Message</button>
-        </form>
-    </div>
-</section>
+    <section class="skills" id="skills">
+        <div class="section-header">
+            <span class="section-tag">EXPERTISE</span>
+            <h2>Our <span class="accent">Skillset</span></h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <div class="skill-bar-wrap">
+                    <div class="skill-label-row">
+                        <span>Web Development</span>
+                        <span class="skill-pct">100%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="100"></div></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-bar-wrap">
+                    <div class="skill-label-row">
+                        <span>Digital Marketing</span>
+                        <span class="skill-pct">100%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="100"></div></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-bar-wrap">
+                    <div class="skill-label-row">
+                        <span>Meta Ads</span>
+                        <span class="skill-pct">100%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="100"></div></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-bar-wrap">
+                    <div class="skill-label-row">
+                        <span>Video Editing</span>
+                        <span class="skill-pct">100%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="100"></div></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-bar-wrap">
+                    <div class="skill-label-row">
+                        <span>Deployment Engineering</span>
+                        <span class="skill-pct">100%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="100"></div></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-bar-wrap">
+                    <div class="skill-label-row">
+                        <span>Search Engine Optimization</span>
+                        <span class="skill-pct">100%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="100"></div></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-bar-wrap">
+                    <div class="skill-label-row">
+                        <span>Web Designing</span>
+                        <span class="skill-pct">100%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="100"></div></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-bar-wrap">
+                    <div class="skill-label-row">
+                        <span>Maintenance & Management</span>
+                        <span class="skill-pct">100%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="100"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </main>
+    <section class="about" id="about">
+        <div class="section-header">
+            <span class="section-tag">ABOUT</span>
+            <h2>Who We <span class="accent">Are</span></h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <p class="about-lead">TrainDevs is a professional Software House delivering innovative digital solutions for modern businesses.</p>
+                <p>With 3+ years of experience in web development and digital marketing, we focus on building scalable, high-performance platforms that help brands grow and succeed in today's competitive digital landscape.</p>
+                <!-- <div class="about-socials">
+                    <span>Follow us:</span>
+                    <a href="https://instagram.com/ch_ehtsham__" target="_blank" class="social-link">Instagram</a>
+                </div> -->
+            </div>
+            <div class="about-visual">
+               
+<dotlottie-wc
+  src="https://lottie.host/dcb26c30-9bef-427f-9004-0c3afce0b99c/bHeUjFm5Y9.lottie"
+  style="width: 400px;height: 400px"
+  autoplay
+  loop
+></dotlottie-wc>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="section-header">
+            <span class="section-tag">CONTACT</span>
+            <h2>Let's Work <span class="accent">Together</span></h2>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p class="contact-intro">Have a project in mind? We'd love to hear about it. Drop us a message and we'll get back to you shortly.</p>
+                <div class="contact-detail">
+                    <span class="detail-label">EMAIL</span>
+                    <a href="mailto:traindevs1@gmail.com" class="detail-value">traindevs1@gmail.com</a>
+                </div>
+                <div class="contact-detail">
+                    <span class="detail-label">CALL</span>
+                    <a href="tel:+923139671764" class="detail-value">+92 313 9671764</a>
+                </div>
+                <div class="contact-detail">
+                    <span class="detail-label">LOCATION</span>
+                    <span class="detail-value">Jhelum,Punjab,Pakistan</span>
+                </div>
+            </div>
+            <form class="contact-form" id="form1">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="form-name">Your Name</label>
+                        <input type="text" name="name" id="form-name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="form-email">Your Email</label>
+                        <input type="email" name="email" id="form-email" placeholder="john@email.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="form-subject">Subject</label>
+                    <input type="text" name="subject" id="form-subject" placeholder="Project Inquiry" required>
+                </div>
+                <div class="form-group">
+                    <label for="form-message">Message</label>
+                    <textarea name="message" id="form-message" rows="6" placeholder="Tell us about your project..." required></textarea>
+                </div>
+                <button type="submit" class="form-submit">
+                    <span class="btn-text">Send Message</span>
+                    <span class="btn-icon">↗</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <span class="footer-copy">© 2026 TrainDevs. All rights reserved.</span>
+          
+        </div>
+    </footer>
+
     <script src="index.js"></script>
 </body>
-
-
 </html>
