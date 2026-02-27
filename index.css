@@ -1050,7 +1050,7 @@ a.detail-value:hover { color: var(--blue); }
     .hamburger { display: flex; }
     .slide-info h4 {
     font-family: var(--font-display);
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     font-weight: 700;
     margin-bottom: 0.4rem;
 }
@@ -1083,4 +1083,5 @@ a.detail-value:hover { color: var(--blue); }
     .section-header h2 { font-size: 2rem; }
     .about-numbers { flex-direction: column; gap: 1.5rem; }
 }
+
 
